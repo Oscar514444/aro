@@ -1,0 +1,6 @@
+# Preserve portable LF line endings for the published source.
+*.py text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf

@@ -1,0 +1,15 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Local configuration, credentials, and tooling
+.env
+.env.*
+*.pem
+*.key
+*.log
+.vscode/
+.idea/
+.DS_Store

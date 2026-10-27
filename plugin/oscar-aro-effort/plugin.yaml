@@ -1,0 +1,5 @@
+name: oscar-aro-effort
+version: 1.0.1
+description: "Native per-task reasoning effort for Hermes delegation."
+author: Oscar
+kind: backend
