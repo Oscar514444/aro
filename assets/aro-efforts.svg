@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 790" role="img" aria-labelledby="title desc">
+  <title id="title">Четыре уровня reasoning в ARO</title>
+  <desc id="desc">PRIMARY выбирает уровень reasoning для каждой задачи. Плагин передаёт выбранное значение и не определяет сложность автоматически. Четыре смысловые категории: low, medium, high и xhigh.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#111a2c"/><stop offset="1" stop-color="#0b1020"/></linearGradient>
+    <linearGradient id="accent" x2="1"><stop stop-color="#6be6cc"/><stop offset="1" stop-color="#5790ff"/></linearGradient>
+    <style>
+      text{font-family:Arial,"DejaVu Sans",sans-serif;fill:#e8edf6}
+      .muted{fill:#a6b2c8}.label{font-size:18px;letter-spacing:2px;font-weight:700}
+      .body{font-size:22px}.small{font-size:17px}.level{font-size:30px;font-weight:700}
+    </style>
+  </defs>
+  <rect width="1200" height="790" rx="28" fill="url(#bg)"/>
+  <path d="M56 45h64" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+  <text x="56" y="91" class="label" fill="#6be6cc">ARO · REASONING EFFORT</text>
+  <text x="56" y="147" font-size="40" font-weight="700">Уровень задаёт PRIMARY</text>
+  <text x="56" y="185" class="body muted">Основная модель выбирает значение для каждой делегируемой задачи.</text>
+  <rect x="56" y="215" width="1088" height="74" rx="14" fill="#151f33" stroke="#33445f"/>
+  <circle cx="91" cy="252" r="8" fill="#6be6cc"/>
+  <text x="116" y="247" class="body" font-weight="700">Плагин передаёт выбор — не оценивает сложность автоматически.</text>
+  <text x="116" y="273" class="small muted">Категории — ориентиры для PRIMARY, а не автоматическая политика.</text>
+
+  <g transform="translate(56 323)">
+    <rect width="530" height="170" rx="18" fill="#121c2e" stroke="#33445f"/>
+    <rect x="0" y="0" width="7" height="170" rx="3" fill="#6be6cc"/>
+    <text x="30" y="50" class="level">low</text><text x="30" y="86" class="label" fill="#6be6cc">ПРОСТОЕ · МЕХАНИЧЕСКОЕ</text>
+    <text x="30" y="126" class="body">Механическая или простая работа</text>
+    <text x="30" y="153" class="small muted">Когда задача не требует сложного разбора.</text>
+  </g>
+  <g transform="translate(614 323)">
+    <rect width="530" height="170" rx="18" fill="#121c2e" stroke="#33445f"/>
+    <rect x="0" y="0" width="7" height="170" rx="3" fill="#5790ff"/>
+    <text x="30" y="50" class="level">medium</text><text x="30" y="86" class="label" fill="#8eafff">ОБЫЧНОЕ</text>
+    <text x="30" y="126" class="body">Типовая повседневная работа</text>
+    <text x="30" y="153" class="small muted">Стандартная задача без особой сложности.</text>
+  </g>
+  <g transform="translate(56 517)">
+    <rect width="530" height="170" rx="18" fill="#121c2e" stroke="#33445f"/>
+    <rect x="0" y="0" width="7" height="170" rx="3" fill="#8eafff"/>
+    <text x="30" y="50" class="level">high</text><text x="30" y="86" class="label" fill="#8eafff">СЛОЖНОЕ · МНОГОШАГОВОЕ</text>
+    <text x="30" y="126" class="body">Сложная многошаговая задача</text>
+    <text x="30" y="153" class="small muted">Требует связать несколько этапов работы.</text>
+  </g>
+  <g transform="translate(614 517)">
+    <rect width="530" height="170" rx="18" fill="#121c2e" stroke="#33445f"/>
+    <rect x="0" y="0" width="7" height="170" rx="3" fill="#6be6cc"/>
+    <text x="30" y="50" class="level">xhigh</text><text x="30" y="86" class="label" fill="#6be6cc">НАИБОЛЕЕ ТРЕБОВАТЕЛЬНОЕ</text>
+    <text x="30" y="126" class="body">Наиболее требовательная задача</text>
+    <text x="30" y="153" class="small muted">Для задач с максимальными требованиями.</text>
+  </g>
+  <text x="56" y="744" class="small muted">Если параметр не передан, плагин использует фиксированный fallback: xhigh.</text>
+</svg>
