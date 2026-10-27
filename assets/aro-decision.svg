@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Как обрабатывается reasoning_effort</title>
+  <desc id="desc">Для задачи PRIMARY отсутствие поля ведёт к фиксированному xhigh. Если поле указано, ARO проверяет его значение: допустимое добавляется в маршрут, а недопустимое вызывает ошибку и остановку без маршрутизации. В маршрут попадает только допустимое значение или fallback.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6be6cc"/></marker>
+    <marker id="error-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#f28b82"/></marker>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #e8edf6; }
+      .muted { fill: #b9c5d7; }
+      .teal { fill: #6be6cc; }
+      .red { fill: #f6a6a0; }
+      .mono { font-family: Consolas, "Courier New", monospace; }
+      .box { fill: #111a2c; stroke: #52627a; stroke-width: 2; }
+      .flow { fill: none; stroke: #6be6cc; stroke-width: 4; marker-end: url(#arrow); }
+      .error-flow { fill: none; stroke: #f28b82; stroke-width: 4; marker-end: url(#error-arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="1120" fill="#0b1020"/>
+  <text x="60" y="70" font-size="38" font-weight="700">КАК ОБРАБАТЫВАЕТСЯ ПАРАМЕТР</text>
+  <text x="60" y="108" font-size="24" class="muted">Проверка reasoning_effort для одной задачи</text>
+
+  <rect x="380" y="135" width="440" height="85" rx="18" class="box"/>
+  <text x="600" y="190" text-anchor="middle" font-size="30" font-weight="600">Задача PRIMARY</text>
+  <path d="M600 220 V250" class="flow"/>
+
+  <path d="M600 250 L815 335 L600 420 L385 335 Z" class="box"/>
+  <text x="600" y="327" text-anchor="middle" font-size="30" class="mono">reasoning_effort</text>
+  <text x="600" y="365" text-anchor="middle" font-size="30">указан?</text>
+
+  <path d="M385 335 H315" class="flow"/>
+  <text x="350" y="320" text-anchor="middle" font-size="25" font-weight="700" class="teal">НЕТ</text>
+  <rect x="45" y="285" width="270" height="100" rx="18" fill="#102d2d" stroke="#6be6cc" stroke-width="2"/>
+  <text x="180" y="325" text-anchor="middle" font-size="26">Fallback</text>
+  <text x="180" y="362" text-anchor="middle" font-size="30" class="teal mono" font-weight="700">xhigh</text>
+
+  <path d="M600 420 V485" class="flow"/>
+  <text x="622" y="463" font-size="25" font-weight="700" class="teal">ДА</text>
+  <path d="M600 485 L805 570 L600 655 L395 570 Z" class="box"/>
+  <text x="600" y="560" text-anchor="middle" font-size="30">Значение</text>
+  <text x="600" y="598" text-anchor="middle" font-size="30">допустимо?</text>
+
+  <path d="M805 570 H885" class="error-flow"/>
+  <text x="845" y="554" text-anchor="middle" font-size="25" font-weight="700" class="red">НЕТ</text>
+  <rect x="885" y="520" width="270" height="100" rx="18" fill="#2a1b27" stroke="#f28b82" stroke-width="2"/>
+  <text x="1020" y="560" text-anchor="middle" font-size="28" class="red" font-weight="700">ОШИБКА</text>
+  <text x="1020" y="594" text-anchor="middle" font-size="24">маршрута нет</text>
+
+  <path d="M600 655 V725" class="flow"/>
+  <text x="622" y="700" font-size="25" font-weight="700" class="teal">ДА</text>
+  <rect x="380" y="725" width="440" height="100" rx="18" fill="#102d2d" stroke="#6be6cc" stroke-width="2"/>
+  <text x="600" y="767" text-anchor="middle" font-size="28" font-weight="600">Указанный уровень</text>
+  <text x="600" y="804" text-anchor="middle" font-size="26" class="teal mono">low · medium · high · xhigh</text>
+
+  <path d="M600 825 V910" class="flow"/>
+  <path d="M180 385 V960 H380" class="flow"/>
+  <rect x="380" y="910" width="440" height="100" rx="18" class="box"/>
+  <text x="600" y="952" text-anchor="middle" font-size="30" font-weight="700">Маршрут задачи</text>
+  <text x="600" y="989" text-anchor="middle" font-size="25" class="muted">Копия route + выбранный effort</text>
+  <text x="600" y="1080" text-anchor="middle" font-size="25" class="muted">Остальные настройки маршрута также должны быть допустимы.</text>
+</svg>
